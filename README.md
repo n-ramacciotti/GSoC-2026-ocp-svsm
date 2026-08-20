@@ -107,6 +107,10 @@ Contributions, that were not directly related to the new protocol, were also mad
 
   Introduced custom test runner for userspace tasks, now it is possible to test the kernel `uapi` at runtime.
 
+- [kernel/guestmem: Support references in slice index writes - #1197](https://github.com/coconut-svsm/svsm/pull/1197) [**merged**]
+
+  The infrastructure for accessing memory outside the SVSM kernel (SVSM user/Guest memory) could access a slice of elements, but could only write to an index through an owned value, not through a reference. This PR adds reference support for this type of access.
+
 ## Try it yourself
 
 **note**: It requires AMD Secure Encrypted Virtualization with Secure Nested Paging (AMD SEV-SNP).
